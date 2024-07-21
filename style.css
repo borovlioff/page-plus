@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+#app {
+  display: flex;
+}
+
+#sidebar {
+  width: 200px;
+  background-color: #f4f4f4;
+  padding: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+#sidebar button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+#sidebar button:hover {
+  background-color: #0056b3;
+}
+
+#editor {
+  width: 100%;
+}
+
+#css-editor {
+  margin-top: 20px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#css-editor.hidden {
+  display: none;
+}
+
+#css-editor label {
+  display: block;
+  margin: 5px 0;
+}
+
+#css-editor input {
+  width: calc(100% - 20px);
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+#css-editor button {
+  background-color: #28a745;
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#css-editor button:hover {
+  background-color: #218838;
+}
+
+#grid-menu {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#grid-menu label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#grid-menu input {
+  width: 100px;
+}
+
+#page-background {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#page-background label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#page-background input {
+  width: 100px;
+}
+
+.draggable:hover {
+  border: 2px solid #000; /* Вы можете настроить стиль и цвет рамки по вашему усмотрению */
+}
+
+#grid-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Чтобы события мыши не захватывались холстом */
+}
+
+#context-menu {
+  position: absolute;
+  z-index: 1000;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+#context-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#context-menu ul li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+#context-menu ul li:hover {
+  background-color: #f4f4f4;
+}
+
+.hidden {
+  display: none;
+}

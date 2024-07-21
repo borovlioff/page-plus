@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конструктор сайтов</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.10.11/interact.min.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/8773a574ba.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="app">
+        <aside id="sidebar">
+            <button id="add-empty-block-btn"><i class="fas fa-square"></i></button>
+            <button id="add-image-btn"><i class="fas fa-image"></i> </button>
+            <button id="add-div-btn"><i class="fas fa-shapes"></i> </button>
+            <button id="add-text-btn"><i class="fas fa-font"></i> </button>
+            <button id="export-btn"><i class="fas fa-download"></i> Экспорт</button>
+            <div id="css-editor" class="hidden">
+                <h3>Редактировать CSS</h3>
+                <label for="element-id">ID элемента:</label>
+                <input type="text" id="element-id" name="element-id">
+                <label for="element-class">Классы элемента:</label>
+                <input type="text" id="element-class" name="element-class">
+                <label for="width">Ширина:</label>
+                <input type="text" id="width" name="width">
+                <label for="height">Высота:</label>
+                <input type="text" id="height" name="height">
+                <label for="background-color">Цвет фона:</label>
+                <input type="color" id="background-color" name="background-color">
+                <label for="color">Цвет текста:</label>
+                <input type="color" id="color" name="color">
+                <label for="font-size">Размер шрифта:</label>
+                <input type="text" id="font-size" name="font-size">
+                <label for="padding">Внутренний отступ:</label>
+                <input type="text" id="padding" name="padding">
+                <label for="margin">Внешний отступ:</label>
+                <input type="text" id="margin" name="margin">
+                <label for="border">Граница:</label>
+                <input type="text" id="border" name="border">
+                <button id="apply-css-btn">Применить</button>
+            </div>
+            
+            <div id="grid-menu">
+                <h3>Настройки сетки</h3>
+                <label for="cell-size">Размер ячейки:</label>
+                <input type="number" id="cell-size" name="cell-size" min="10" max="50" value="20">
+                <label for="grid-color">Цвет сетки:</label>
+                <input type="color" id="grid-color" name="grid-color">
+                <button id="toggle-grid-btn">Включить сетку</button>
+            </div>
+            <div id="page-background">
+                <h3>Фон страницы</h3>
+                <label for="page-background-color">Цвет фона:</label>
+                <input type="color" id="page-background-color" name="page-background-color">
+                <button id="apply-page-background-btn">Применить фон</button>
+            </div>
+        </aside>
+        <main id="editor">
+            <canvas id="grid-canvas"></canvas>
+            <div id="context-menu" class="hidden">
+                <ul>
+                    <li id="add-text-context">Добавить текст</li>
+                </ul>
+            </div>            
+        </main>
+        
+    </div>
+    <!-- Include necessary libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.10.11/interact.min.js"></script>
+    <!-- Include your custom JavaScript file -->
+    <script src="main.js"></script>
+</body>
+</html>
